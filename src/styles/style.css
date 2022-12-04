@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto:wght@400;500&display=swap');
+* {
+    transition: all .1s ease-in;
+}
+body {
+    background-color: #E5E5E5;
+}
+main {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+section {
+    padding: 60px 0;
+}
+h2 {
+    font-family: 'Delius Unicase';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 80px;
+}
+p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E0E0E0;
+}
+span {
+    font-weight: 500px;
+}
+.grid-area {
+    display: grid;
+    gap: 30px;
+}
+.grid-area__item {
+    min-height: 370px;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.grid-area__icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    opacity: 0;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(224, 224, 224, 0.5);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover {
+    background: rgba(224, 224, 224, 1);
+}
+.icon i {
+    color: #4F4F4F;
+    font-size: 17.5px;
+}
+.grid-area__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+.grid-area__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+    border-radius: 20px;
+}
+.grid-area__item:hover:after {
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+}
+.grid-area__item:hover .grid-area__icons {
+    opacity: 1;
+}
+/* ---------GRID------------------- */
+.grid-area-1 {
+    /* grid-template-areas: 
+        "item-1 item-2 item-2"
+        "item-3 item-3 item-4"
+        "item-5 item-6 item-6"; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+.grid-area-1 .item-1 {
+    background-image: url(../images/image-1.png);
+}
+.grid-area-1 .item-2 {
+    background-image: url(../images/image-2.png);
+    grid-column: 2 / 4;
+}
+.grid-area-1 .item-3 {
+    background-image: url(../images/image-3.png);
+    grid-column: 1 / 3;
+}
+.grid-area-1 .item-4 {
+    background-image: url(../images/image-4.png);
+}
+.grid-area-1 .item-5 {
+    background-image: url(../images/image-5.png);
+}
+.grid-area-1 .item-6 {
+    background-image: url(../images/image-6.png);
+    grid-column: 2 / 4;
+}
+.grid-area-2 {
+    grid-template-areas: 
+        "item-1 item-2 item-2"
+        "item-3 item-3 item-4"
+        "item-5 item-5 item-6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+.grid-area-2 .item-1 {
+    grid-area: item-1;
+    background-image: url(../images/image-21.png);
+}
+.grid-area-2 .item-2 {
+    grid-area: item-2;
+    background-image: url(../images/image-22.png);
+}
+.grid-area-2 .item-3 {
+    grid-area: item-3;
+    background-image: url(../images/image-23.png);
+}
+.grid-area-2 .item-4 {
+    grid-area: item-4;
+    background-image: url(../images/image-24.png);
+}
+.grid-area-2 .item-5 {
+    grid-area: item-5;
+    background-image: url(../images/image-25.png);
+}
+.grid-area-2 .item-6 {
+    grid-area: item-6;
+    background-image: url(../images/image-26.png);
+}
+.grid-area-3 {
+    grid-template-areas: 
+        "item-1 item-2 item-3"
+        "item-4 item-2 item-5"
+        "item-6 item-7 item-5"
+        "item-6 item-8 item-8"
+        "item-9 item-9 item-10";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-area-3 .item-1 {
+    grid-area: item-1;
+    background-image: url(../images/image-31.png);
+}
+.grid-area-3 .item-2 {
+    grid-area: item-2;
+    background-image: url(../images/image-32.png);
+}
+.grid-area-3 .item-3 {
+    grid-area: item-3;
+    background-image: url(../images/image-33.png);
+}
+.grid-area-3 .item-4 {
+    grid-area: item-4;
+    background-image: url(../images/image-34.png);
+}
+.grid-area-3 .item-5 {
+    grid-area: item-5;
+    background-image: url(../images/image-35.png);
+}
+.grid-area-3 .item-6 {
+    grid-area: item-6;
+    background-image: url(../images/image-36.png);
+}
+.grid-area-3 .item-7 {
+    grid-area: item-7;
+    background-image: url(../images/image-37.png);
+}
+.grid-area-3 .item-8 {
+    grid-area: item-8;
+    background-image: url(../images/image-38.png);
+}
+.grid-area-3 .item-9 {
+    grid-area: item-9;
+    background-image: url(../images/image-39.png);
+}
+.grid-area-3 .item-10 {
+    grid-area: item-10;
+    background-image: url(../images/image-310.png);
+}
